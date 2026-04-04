@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corporacion Actividad Fisica y Fisioterapia - CORFITERAPIAS | Propiedad Horizontal SST</title>
+    <title>CORFITERAPIAS | Propiedad Horizontal SST</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -20,261 +20,129 @@
 
         * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--light);
-            color: #444;
-            line-height: 1.6;
-        }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--light); color: #444; line-height: 1.6; }
 
-        /* Barra de Urgencia */
-        .urgency-bar {
-            background-color: var(--urgent);
-            color: white;
-            text-align: center;
-            padding: 10px 5%;
-            font-size: 0.85rem;
-            font-weight: 600;
-            position: sticky;
-            top: 0;
-            z-index: 1100;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-        }
+        .urgency-bar { background-color: var(--urgent); color: white; text-align: center; padding: 10px 5%; font-size: 0.85rem; font-weight: 600; position: sticky; top: 0; z-index: 1100; display: flex; justify-content: center; align-items: center; gap: 10px; }
 
-        header {
-            background: var(--white);
-            padding: 0.5rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 40px; 
-            z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-        }
-
+        header { background: var(--white); padding: 0.5rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 40px; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
         .header-brand img { height: 65px; width: auto; }
-
         nav ul { display: flex; list-style: none; gap: 20px; }
         nav ul li a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 0.9rem; }
 
-        /* Banner Principal */
-        .hero {
-            height: 75vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            text-align: center;
-            background: linear-gradient(rgba(0, 74, 153, 0.85), rgba(5, 25, 45, 0.95)), 
-                        url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            padding: 0 10%;
-        }
-
-        .hero-logo { 
-            width: 420px; 
-            max-width: 85%; 
-            margin-bottom: 25px; 
-            filter: drop-shadow(0 8px 15px rgba(0,0,0,0.4)); 
-        }
-
-        .hero-content h2 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin-bottom: 1rem; }
+        .hero { height: 65vh; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--white); text-align: center; background: linear-gradient(rgba(0, 74, 153, 0.85), rgba(5, 25, 45, 0.95)), url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; padding: 0 10%; }
+        .hero-logo { width: 380px; max-width: 85%; margin-bottom: 25px; filter: drop-shadow(0 8px 15px rgba(0,0,0,0.4)); }
+        .hero-content h2 { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; margin-bottom: 1rem; }
 
         section { padding: 80px 10%; }
         .section-title { text-align: center; margin-bottom: 40px; }
         .underline { width: 60px; height: 4px; background: var(--accent); margin: 10px auto; }
 
-        /* Módulo de Servicios */
-        .services-container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        
-        .services-intro {
-            text-align: center;
-            background: var(--primary);
-            color: white;
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            font-weight: 500;
-        }
+        /* Estilo Nota Propuesta */
+        .ph-box { background: var(--white); padding: 40px; border-radius: 20px; box-shadow: var(--shadow); max-width: 900px; margin: 0 auto; border-left: 8px solid var(--primary); }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .service-card {
-            background: var(--white);
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            border-top: 4px solid var(--accent);
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
-
-        .service-card i {
-            color: var(--primary);
-            font-size: 1.4rem;
-            margin-top: 5px;
-        }
-
-        .service-card h4 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
-            color: var(--dark);
-        }
-
-        /* Módulo Propuesta */
-        .ph-box {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            max-width: 900px;
-            margin: 0 auto;
-            border-left: 8px solid var(--primary);
-        }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .service-card { background: var(--white); padding: 25px; border-radius: 15px; box-shadow: var(--shadow); border-top: 4px solid var(--accent); display: flex; align-items: flex-start; gap: 15px; }
+        .service-card i { color: var(--primary); font-size: 1.4rem; margin-top: 5px; }
 
         /* Testimonios */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-        .testimonial-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-        }
-        .testimonial-author { font-weight: 700; color: var(--primary); margin-top: 15px; }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .testimonial-card { background: var(--white); padding: 30px; border-radius: 20px; box-shadow: var(--shadow); }
+        .testimonial-author { font-weight: 700; color: var(--primary); margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px; }
         .testimonial-author span { display: block; font-weight: 400; color: #888; font-size: 0.8rem; }
 
-        /* Planes */
         .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .price-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); text-align: center; padding: 40px; }
         .price-tag { font-size: 2.2rem; font-weight: 700; color: var(--primary); margin: 15px 0; display: block; }
 
-        .btn {
-            display: inline-block;
-            width: 100%;
-            padding: 16px;
-            background: var(--primary);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: 0.3s;
-            text-align: center;
-        }
+        .btn { display: inline-block; width: 100%; padding: 16px; background: var(--primary); color: var(--white); text-decoration: none; border-radius: 50px; font-weight: 600; border: none; cursor: pointer; transition: 0.3s; text-align: center; }
         .btn-accent { background: var(--accent); }
-        .btn-disabled { background: #ccc; cursor: not-allowed; }
+        .btn-disabled { background: #ccc; cursor: not-allowed; opacity: 0.6; }
 
-        /* Modales Mejorados */
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 10, 30, 0.95);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-            backdrop-filter: blur(8px);
-        }
-        .modal-content {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 30px;
-            max-width: 480px;
-            width: 90%;
-            text-align: center;
-        }
-
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 10, 30, 0.95); z-index: 2000; justify-content: center; align-items: center; backdrop-filter: blur(8px); }
+        .modal-content { background: var(--white); padding: 40px; border-radius: 30px; max-width: 480px; width: 90%; text-align: center; }
         .step-container { display: none; animation: fadeIn 0.5s; }
         .step-active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 
         .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 35px; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
 
-        @media (max-width: 768px) { header { top: 60px; } .hero-logo { width: 280px; } .hero-content h2 { font-size: 1.8rem; } }
+        @media (max-width: 768px) { header { top: 60px; } .hero-logo { width: 280px; } }
     </style>
 </head>
 <body>
 
     <div class="urgency-bar">
-        <i class="fas fa-exclamation-triangle"></i>
-        ATENCIÓN: El reporte de estándares mínimos ante el Ministerio del Trabajo es obligatorio. ¡Evite sanciones!
+        <i class="fas fa-exclamation-triangle"></i> ATENCIÓN: El reporte de estándares mínimos ante el Ministerio del Trabajo es obligatorio.
     </div>
 
     <header>
         <div class="header-brand"><img src="logo.png.png" alt="CORFITERAPIAS"></div>
         <nav>
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#propuesta">Propuesta</a></li>
                 <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
                 <li><a href="#planes">Planes</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="inicio" class="hero">
-        <img src="logo.png.png" alt="Logo CorFiterapias" class="hero-logo">
+        <img src="logo.png.png" alt="Logo" class="hero-logo">
         <div class="hero-content">
-            <h2>Consultoría y Asesoría del SG-SST para Propiedades Horizontales</h2>
+            <h2>Consultoría SG-SST Especializada</h2>
             <p>Cumplimiento normativo y seguridad para su copropiedad.</p>
         </div>
     </section>
 
-    <section id="servicios">
+    <section id="propuesta" style="background: #f0f4f8;">
         <div class="section-title">
-            <h2>Nuestros Servicios</h2>
+            <h2>Propuesta Técnica</h2>
             <div class="underline"></div>
         </div>
-        
-        <div class="services-container">
-            <div class="services-intro">
-                <i class="fas fa-info-circle"></i> El servicio se desarrolla bajo un modelo de acompañamiento profesional.
-            </div>
+        <div class="ph-box">
+            <p><strong>Reciban un cordial saludo.</strong></p>
+            <p>En cumplimiento de la normativa vigente en Colombia, todas las propiedades horizontales que cuenten con trabajadores deben implementar el SG-SST para prevenir accidentes y garantizar condiciones seguras.</p>
+            <p>Presentamos nuestra propuesta para la implementación y acompañamiento del SG-SST, adaptada a las necesidades específicas de su copropiedad.</p>
+        </div>
+    </section>
 
-            <div class="services-grid">
-                <div class="service-card"><i class="fas fa-clipboard-check"></i><h4>Diagnóstico inicial del SG-SST</h4></div>
-                <div class="service-card"><i class="fas fa-folder-open"></i><h4>Diseño documental del sistema</h4></div>
-                <div class="service-card"><i class="fas fa-exclamation-circle"></i><h4>Matriz de identificación de peligros</h4></div>
-                <div class="service-card"><i class="fas fa-calendar-alt"></i><h4>Plan de trabajo anual</h4></div>
-                <div class="service-card"><i class="fas fa-microscope"></i><h4>Vigilancia epidemiológica</h4></div>
-                <div class="service-card"><i class="fas fa-fire-extinguisher"></i><h4>Plan de emergencias técnico</h4></div>
-                <div class="service-card"><i class="fas fa-search"></i><h4>Auditoría interna documental</h4></div>
-                <div class="service-card"><i class="fas fa-chalkboard-teacher"></i><h4>Capacitaciones básicas</h4></div>
-                <div class="service-card"><i class="fas fa-chart-line"></i><h4>Seguimiento y recomendaciones</h4></div>
+    <section id="servicios">
+        <div class="section-title"><h2>Nuestros Servicios</h2><div class="underline"></div></div>
+        <div class="services-grid">
+            <div class="service-card"><i class="fas fa-clipboard-check"></i><h4>Diagnóstico inicial del SG-SST</h4></div>
+            <div class="service-card"><i class="fas fa-folder-open"></i><h4>Diseño documental del sistema</h4></div>
+            <div class="service-card"><i class="fas fa-exclamation-circle"></i><h4>Matriz de peligros guiada</h4></div>
+            <div class="service-card"><i class="fas fa-calendar-alt"></i><h4>Plan de trabajo anual</h4></div>
+            <div class="service-card"><i class="fas fa-fire-extinguisher"></i><h4>Plan de emergencias técnico</h4></div>
+            <div class="service-card"><i class="fas fa-chart-line"></i><h4>Seguimiento y recomendaciones</h4></div>
+        </div>
+    </section>
+
+    <section id="testimonios" style="background: #f0f7ff;">
+        <div class="section-title"><h2>Casos de Éxito</h2><div class="underline"></div></div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p><i>"La asesoría fue impecable. Profesionalismo y claridad en cada paso del proceso legal."</i></p>
+                <p class="testimonial-author">Jorge Mendez<span>Propiedad Horizontal</span></p>
+            </div>
+            <div class="testimonial-card">
+                <p><i>"Excelente acompañamiento en las auditorías. Mucha tranquilidad normativa."</i></p>
+                <p class="testimonial-author">Consejo de Administración<span>Conjunto Residencial</span></p>
             </div>
         </div>
     </section>
 
     <section id="planes">
-        <div class="section-title"><h2>Planes de Inversión</h2><div class="underline"></div></div>
+        <div class="section-title"><h2>Inversión</h2><div class="underline"></div></div>
         <div class="pricing-grid">
             <div class="price-card">
-                <h3>PAQUETE CONSULTORÍA</h3>
-                <p>Diseño y Estructuración</p>
+                <h3>CONSULTORÍA</h3>
                 <span class="price-tag">$3.500.000</span>
                 <button class="btn" onclick="openStepModal('https://mpago.li/24sMEqN')">Contratar Servicio</button>
             </div>
             <div class="price-card" style="border: 2px solid var(--accent);">
-                <h3>PAQUETE ASESORÍA</h3>
-                <p>Implementación Mensual</p>
+                <h3>ASESORÍA</h3>
                 <span class="price-tag">$1.200.000</span>
                 <button class="btn btn-accent" onclick="openStepModal('https://mpago.li/34g69YH')">Contratar Servicio</button>
             </div>
@@ -286,63 +154,42 @@
             <div id="step1" class="step-container step-active">
                 <i class="fas fa-credit-card" style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
                 <h3>PASO 1: Pago Seguro</h3>
-                <p style="margin: 20px 0; color: #666;">Realice el pago a través de nuestra plataforma segura de Mercado Pago para iniciar su proceso.</p>
-                <a id="payBtn" href="#" target="_blank" class="btn" onclick="enableStep2()">
-                    Realizar Pago con Mercado Pago
-                </a>
-                <button id="btnNext" class="btn btn-disabled" disabled onclick="showStep(2)" style="margin-top: 15px;">
-                    Siguiente: Registrar Datos <i class="fas fa-arrow-right"></i>
-                </button>
+                <p style="margin: 20px 0; color: #666;">Para iniciar la vinculación técnica, por favor realice el pago del plan seleccionado.</p>
+                <a id="payBtn" href="#" target="_blank" class="btn" onclick="enableStep2()">Pagar con Mercado Pago</a>
+                <button id="btnNext" class="btn btn-disabled" disabled onclick="showStep(2)" style="margin-top: 15px;">Siguiente: Dar Información <i class="fas fa-arrow-right"></i></button>
             </div>
-
             <div id="step2" class="step-container">
-                <i class="fas fa-edit" style="font-size: 3rem; color: var(--accent); margin-bottom: 20px;"></i>
-                <h3>PASO 2: Registro de Empresa</h3>
-                <p style="margin: 20px 0; color: #666;">¡Pago detectado! Ahora, por favor complete los datos de su copropiedad para generar el expediente técnico.</p>
-                <a href="https://forms.gle/ZY9CyoPXGNEfcUay8" target="_blank" class="btn btn-accent">
-                    Completar Formulario de Registro
-                </a>
-                <p style="margin-top: 15px; font-size: 0.8rem; color: #888;">Una vez completado, un consultor se contactará con usted.</p>
+                <i class="fas fa-info-circle" style="font-size: 3rem; color: var(--accent); margin-bottom: 20px;"></i>
+                <h3>PASO 2: Información</h3>
+                <p style="margin: 20px 0; color: #666;">¡Pago iniciado! Ahora proporcione los detalles de su copropiedad para el registro.</p>
+                <a href="https://forms.gle/ZY9CyoPXGNEfcUay8" target="_blank" class="btn btn-accent">Llenar Formulario Técnico</a>
             </div>
-
-            <p onclick="closeStepModal()" style="margin-top: 25px; cursor: pointer; color: #bbb; font-size: 0.9rem;">Cerrar ventana</p>
+            <p onclick="closeStepModal()" style="margin-top: 25px; cursor: pointer; color: #bbb;">Cancelar</p>
         </div>
     </div>
 
     <a href="https://wa.me/573054513754" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
     <script>
-        let currentPaymentLink = "";
-        
         function openStepModal(link) {
-            currentPaymentLink = link;
             document.getElementById('stepModal').style.display = 'flex';
             document.getElementById('payBtn').href = link;
             showStep(1);
-            
-            // Resetear el botón de siguiente por si acaso
-            const nextBtn = document.getElementById('btnNext');
-            nextBtn.classList.add('btn-disabled');
-            nextBtn.disabled = true;
+            document.getElementById('btnNext').classList.add('btn-disabled');
+            document.getElementById('btnNext').disabled = true;
         }
-
-        function showStep(stepNumber) {
+        function showStep(n) {
             document.querySelectorAll('.step-container').forEach(el => el.classList.remove('step-active'));
-            document.getElementById('step' + stepNumber).classList.add('step-active');
+            document.getElementById('step' + n).classList.add('step-active');
         }
-
         function enableStep2() {
-            // Se activa después de que el usuario hace clic en el botón de pago
             setTimeout(() => {
-                const nextBtn = document.getElementById('btnNext');
-                nextBtn.classList.remove('btn-disabled');
-                nextBtn.disabled = false;
-            }, 1000); 
+                const btn = document.getElementById('btnNext');
+                btn.classList.remove('btn-disabled');
+                btn.disabled = false;
+            }, 1500);
         }
-
-        function closeStepModal() { 
-            document.getElementById('stepModal').style.display = 'none'; 
-        }
+        function closeStepModal() { document.getElementById('stepModal').style.display = 'none'; }
     </script>
 </body>
 </html>
