@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CORFITERAPIAS | Soluciones SST</title>
+    <title>Corporacion Actividad Fisica y Fisioteapia - CORFITERAPIAS | Soluciones SST</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -26,7 +26,6 @@
             line-height: 1.6;
         }
 
-        /* Navegación Mejorada */
         header {
             background: var(--white);
             padding: 0.5rem 5%;
@@ -39,22 +38,13 @@
             box-shadow: 0 2px 15px rgba(0,0,0,0.05);
         }
 
-        .header-brand { display: flex; align-items: center; gap: 10px; }
-        .header-brand img { height: 60px; width: auto; }
+        .header-brand img { height: 65px; width: auto; }
 
         nav ul { display: flex; list-style: none; gap: 20px; }
-        nav ul li a { 
-            text-decoration: none; 
-            color: var(--dark); 
-            font-weight: 500; 
-            font-size: 0.9rem;
-            transition: 0.3s;
-        }
-        nav ul li a:hover { color: var(--accent); }
+        nav ul li a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 0.9rem; }
 
-        /* Hero Section */
         .hero {
-            height: 70vh;
+            height: 60vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -67,29 +57,13 @@
             padding: 0 10%;
         }
 
-        .hero-content h2 { font-family: 'Montserrat', sans-serif; font-size: 3rem; margin-bottom: 1rem; }
+        .hero-content h2 { font-family: 'Montserrat', sans-serif; font-size: 2.8rem; margin-bottom: 1rem; }
 
-        section { padding: 100px 10% 60px; }
-        .section-title { text-align: center; margin-bottom: 50px; }
-        .section-title h2 { font-family: 'Montserrat', sans-serif; color: var(--primary); font-size: 2.2rem; }
+        section { padding: 80px 10%; }
+        .section-title { text-align: center; margin-bottom: 40px; }
         .underline { width: 50px; height: 4px; background: var(--accent); margin: 10px auto; }
 
-        /* Qué Hacemos */
-        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-        .about-text p { margin-bottom: 20px; font-size: 1.1rem; text-align: justify; }
-        .about-img img { width: 100%; border-radius: 20px; box-shadow: var(--shadow); }
-
-        /* Servicios */
-        .services-container { background: var(--white); padding: 40px; border-radius: 30px; box-shadow: var(--shadow); }
-        .services-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .service-card { display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8fbff; border-radius: 10px; }
-        .service-card i { color: var(--accent); font-size: 1.2rem; }
-
-        /* Paquetes con Imágenes */
+        /* Estilo de los Paquetes */
         .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .price-card {
             background: var(--white);
@@ -97,18 +71,11 @@
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: 0.3s;
+            text-align: center;
         }
-        .price-card:hover { transform: translateY(-10px); }
-        .price-img { height: 200px; width: 100%; object-fit: cover; }
-        .price-body { padding: 30px; text-align: center; }
+        .price-img { height: 180px; width: 100%; object-fit: cover; }
+        .price-body { padding: 30px; }
         .price-tag { font-size: 2rem; font-weight: 700; color: var(--primary); margin: 15px 0; display: block; }
-
-        /* Testimonios */
-        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .test-card { background: var(--white); padding: 30px; border-radius: 20px; box-shadow: var(--shadow); }
-        .test-card p { font-style: italic; margin-bottom: 20px; }
-        .user-info { display: flex; align-items: center; gap: 10px; }
-        .user-info img { width: 50px; height: 50px; border-radius: 50%; }
 
         .btn {
             display: inline-block;
@@ -119,6 +86,30 @@
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .btn-accent { background: var(--accent); }
+
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 10, 30, 0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+        }
+        .modal-content {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 30px;
+            max-width: 450px;
+            width: 90%;
             text-align: center;
         }
 
@@ -129,12 +120,10 @@
             width: 60px; height: 60px; border-radius: 50%;
             display: flex; justify-content: center; align-items: center;
             font-size: 30px; z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        @media (max-width: 768px) {
-            .about-grid { grid-template-columns: 1fr; }
-            nav ul { display: none; }
-        }
+        @media (max-width: 768px) { nav ul { display: none; } }
     </style>
 </head>
 <body>
@@ -149,112 +138,83 @@
                 <li><a href="#que-hacemos">Qué hacemos</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#planes">Planes</a></li>
-                <li><a href="#testimonios">Testimonios</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <h2>Liderazgo en Seguridad Laboral</h2>
-            <p>Hacemos del cumplimiento normativo una ventaja estratégica.</p>
+            <h2>Asesoría Integral en SST</h2>
+            <p>Hacemos del cumplimiento normativo un proceso simple y práctico.</p>
         </div>
     </section>
 
     <section id="que-hacemos">
-        <div class="about-grid">
-            <div class="about-text">
-                <div class="section-title" style="text-align: left;">
-                    <h2>¿Qué hacemos?</h2>
-                    <div class="underline" style="margin-left: 0;"></div>
-                </div>
-                <p>Somos una entidad orientada a la promoción de la salud y prevención del riesgo. Brindamos servicios especializados de asesoría y consultoría en <strong>Seguridad y Salud en el Trabajo (SG-SST)</strong>.</p>
-                <p>Nuestro enfoque permite a las empresas cumplir con la norma de forma práctica, organizada y sin sobrecarga operativa.</p>
-            </div>
-            <div class="about-img">
-                <img src="https://images.unsplash.com/photo-1581092921461-39b9d08a9b21?q=80&w=2070&auto=format&fit=crop" alt="Trabajo en equipo">
-            </div>
-        </div>
-    </section>
-
-    <section id="servicios" style="background-color: #f0f4f8;">
         <div class="section-title">
-            <h2>Nuestros Servicios</h2>
+            <h2>¿Qué hacemos?</h2>
             <div class="underline"></div>
-            <p>Modelo de acompañamiento integral que incluye:</p>
         </div>
-        <div class="services-container">
-            <div class="services-list">
-                <div class="service-card"><i class="fas fa-check-circle"></i> Diagnóstico inicial</div>
-                <div class="service-card"><i class="fas fa-file-alt"></i> Diseño documental</div>
-                <div class="service-card"><i class="fas fa-exclamation-triangle"></i> Matriz de peligros</div>
-                <div class="service-card"><i class="fas fa-calendar-alt"></i> Plan de trabajo anual</div>
-                <div class="service-card"><i class="fas fa-user-shield"></i> Vigilancia epidemiológica</div>
-                <div class="service-card"><i class="fas fa-ambulance"></i> Plan de emergencias</div>
-                <div class="service-card"><i class="fas fa-search"></i> Auditoría interna</div>
-                <div class="service-card"><i class="fas fa-users"></i> Capacitaciones</div>
-                <div class="service-card"><i class="fas fa-chart-line"></i> Recomendaciones técnicas</div>
-            </div>
-        </div>
+        <p style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem;">
+            Somos una entidad orientada a la promoción de la salud y el fortalecimiento organizacional. Brindamos consultoría especializada en SG-SST para que su empresa cumpla la norma sin sobrecarga operativa.
+        </p>
     </section>
 
-    <section id="planes">
+    <section id="planes" style="background: #f0f4f8;">
         <div class="section-title">
             <h2>Planes de Inversión</h2>
             <div class="underline"></div>
         </div>
         <div class="pricing-grid">
             <div class="price-card">
-                <img src="https://images.unsplash.com/photo-1454165833767-027ffea70250?q=80&w=2070&auto=format&fit=crop" class="price-img" alt="Consultoría">
+                <img src="https://images.unsplash.com/photo-1454165833767-027ffea70250?q=80&w=800" class="price-img" alt="Consultoría">
                 <div class="price-body">
                     <h3>PAQUETE CONSULTORÍA</h3>
-                    <p>Diseño y Estructuración Integral</p>
+                    <p>Diseño y Estructuración</p>
                     <span class="price-tag">$3.500.000</span>
-                    <a href="https://forms.gle/Kb75znAamKeRtScV8" class="btn" target="_blank">Seleccionar</a>
+                    <button class="btn" onclick="openModal('https://mpago.li/24sMEqN')">Seleccionar Paquete</button>
                 </div>
             </div>
+
             <div class="price-card" style="border: 2px solid var(--accent);">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" class="price-img" alt="Asesoría">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800" class="price-img" alt="Asesoría">
                 <div class="price-body">
                     <h3>PAQUETE ASESORÍA</h3>
-                    <p>Implementación y Seguimiento Mensual</p>
-                    <span class="price-tag">$1.200.000 / mes</span>
-                    <a href="https://forms.gle/Kb75znAamKeRtScV8" class="btn" target="_blank" style="background: var(--accent);">Seleccionar</a>
+                    <p>Implementación Mensual</p>
+                    <span class="price-tag">$1.200.000</span>
+                    <button class="btn btn-accent" onclick="openModal('https://mpago.li/34g69YH')">Seleccionar Paquete</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="testimonios" style="background-color: #f0f4f8;">
-        <div class="section-title">
-            <h2>Testimonios</h2>
-            <div class="underline"></div>
+    <div id="paymentModal" class="modal-overlay">
+        <div class="modal-content">
+            <i class="fas fa-file-signature" style="font-size: 3rem; color: var(--accent); margin-bottom: 20px;"></i>
+            <h3>Registro Obligatorio</h3>
+            <p style="margin: 20px 0; color: #666;">Para iniciar su proceso técnico legal, primero complete el formulario de su empresa y luego proceda al pago.</p>
+            
+            <a href="https://forms.gle/Kb75znAamKeRtScV8" target="_blank" class="btn btn-accent">1. Llenar Formulario de Empresa</a>
+            <a id="payBtn" href="#" target="_blank" class="btn">2. Proceder al Pago Seguro</a>
+            
+            <p onclick="closeModal()" style="margin-top: 20px; cursor: pointer; color: #999; font-weight: 500;">Regresar</p>
         </div>
-        <div class="testimonial-grid">
-            <div class="test-card">
-                <p>"La mejor decisión para nuestra empresa. Organizaron todo el SG-SST de manera impecable."</p>
-                <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" alt="Cliente">
-                    <div><h4>Juan Pérez</h4><span>Gerente Administrativo</span></div>
-                </div>
-            </div>
-            <div class="test-card">
-                <p>"Un servicio técnico de alta calidad. Muy recomendados por su practicidad y cumplimiento."</p>
-                <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop" alt="Cliente">
-                    <div><h4>Ana María Soto</h4><span>Directora RRHH</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <a href="https://wa.me/573054513754" class="wa-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <footer style="text-align: center; padding: 50px; background: var(--dark); color: #888;">
-        <p>&copy; 2024 CORFITERAPIAS. Todos los derechos reservados.</p>
-    </footer>
-
+    <script>
+        function openModal(link) {
+            document.getElementById('paymentModal').style.display = 'flex';
+            document.getElementById('payBtn').href = link;
+        }
+        function closeModal() {
+            document.getElementById('paymentModal').style.display = 'none';
+        }
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('paymentModal')) closeModal();
+        }
+    </script>
 </body>
 </html>
