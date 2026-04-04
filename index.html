@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CORFITERAPIAS | Soluciones Integrales SST</title>
+    <title>CORFITERAPIAS | Seguridad y Salud en el Trabajo</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -26,12 +26,11 @@
             line-height: 1.6;
         }
 
-        /* Header Mejorado */
+        /* Header */
         header {
             background: var(--white);
             padding: 1rem 5%;
             display: flex;
-            justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
@@ -40,85 +39,87 @@
         }
 
         .header-brand { display: flex; align-items: center; gap: 15px; }
-        .header-brand img { height: 65px; width: auto; object-fit: contain; }
-        .brand-text h1 { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; color: var(--primary); margin: 0; }
-        .brand-text span { font-size: 0.8rem; color: #888; display: block; font-weight: 500; }
+        .header-brand img { height: 70px; width: auto; object-fit: contain; }
+        .brand-text h1 { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: var(--primary); margin: 0; letter-spacing: 1px; }
 
-        /* Hero Moderno con Imagen de Trabajadores */
+        /* Hero */
         .hero {
             position: relative;
-            height: 70vh;
-            min-height: 500px;
+            height: 60vh;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--white);
             text-align: center;
-            background: linear-gradient(rgba(0, 74, 153, 0.75), rgba(5, 25, 45, 0.85)), 
-                        url('https://images.unsplash.com/photo-1544725121-be3b5103efeb?q=80&w=2070&auto=format&fit=crop');
+            background: linear-gradient(rgba(0, 74, 153, 0.7), rgba(5, 25, 45, 0.8)), 
+                        url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             padding: 0 10%;
         }
 
-        .hero-content h2 { font-family: 'Montserrat', sans-serif; font-size: 3rem; margin-bottom: 1.5rem; line-height: 1.2; }
-        .hero-content p { font-size: 1.2rem; font-weight: 300; max-width: 800px; margin: 0 auto; }
+        .hero-content h2 { font-family: 'Montserrat', sans-serif; font-size: 2.8rem; margin-bottom: 1rem; line-height: 1.2; }
 
-        /* Secciones */
+        /* Secciones Generales */
         section { padding: 80px 10%; }
         .section-title { text-align: center; margin-bottom: 50px; }
-        .section-title h2 { font-family: 'Montserrat', sans-serif; color: var(--primary); font-size: 2rem; }
+        .section-title h2 { font-family: 'Montserrat', sans-serif; color: var(--primary); font-size: 2.2rem; }
         .underline { width: 60px; height: 4px; background: var(--accent); margin: 15px auto; border-radius: 2px; }
 
-        /* Tarjetas de Servicio con Imágenes */
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .feature-card {
+        /* Presentación Corporativa */
+        .about-box {
             background: var(--white);
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+            border-left: 8px solid var(--accent);
+        }
+        .about-box p { font-size: 1.1rem; color: #555; margin-bottom: 20px; text-align: justify; }
+
+        /* Servicios */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        .service-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            transition: 0.3s;
+        }
+        .service-item:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+        .service-item i { color: var(--accent); font-size: 1.4rem; }
+
+        /* Testimonios */
+        .testimonials { background: #f0f4f8; }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .testimonial-card {
+            background: var(--white);
+            padding: 40px;
             border-radius: 20px;
-            padding: 35px;
-            text-align: left;
-            box-shadow: var(--shadow);
-            transition: 0.3s;
-            border: 1px solid rgba(0,0,0,0.02);
-        }
-        .feature-card i { font-size: 2.5rem; color: var(--accent); margin-bottom: 20px; display: block; }
-        .feature-card h3 { color: var(--primary); margin-bottom: 15px; font-family: 'Montserrat', sans-serif; }
-
-        /* Paquetes de Precios */
-        .pricing-section { background: #f0f4f8; }
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; margin-top: 20px; }
-        
-        .price-card {
-            background: var(--white);
-            border-radius: 25px;
-            padding: 50px 40px;
-            text-align: center;
-            box-shadow: var(--shadow);
             position: relative;
-            overflow: hidden;
+            box-shadow: var(--shadow);
         }
-        .price-card.popular { border: 2px solid var(--accent); transform: scale(1.05); }
-        .price-card h3 { font-family: 'Montserrat', sans-serif; color: var(--dark); font-size: 1.4rem; }
-        .price-tag { font-size: 2.5rem; font-weight: 700; color: var(--primary); margin: 25px 0; display: block; }
-
-        /* Botones */
-        .btn {
-            display: inline-block;
-            width: 100%;
-            padding: 16px;
-            background: var(--primary);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: 0.3s;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
+        .testimonial-card i.quote {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: rgba(0,168,232,0.1);
         }
-        .btn:hover { background: var(--accent); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,168,232,0.3); }
+        .testimonial-card p { font-style: italic; color: #666; margin-bottom: 20px; }
+        .author { display: flex; align-items: center; gap: 15px; }
+        .author img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; }
+        .author-info h4 { font-size: 1rem; color: var(--primary); }
+        .author-info span { font-size: 0.8rem; color: #999; }
 
-        /* WhatsApp */
+        /* Botón WhatsApp */
         .wa-float {
             position: fixed;
             bottom: 30px;
@@ -134,33 +135,13 @@
             font-size: 35px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
             z-index: 1000;
-            text-decoration: none;
+            transition: 0.3s;
         }
-
-        /* Modal */
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 10, 30, 0.9);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-            backdrop-filter: blur(5px);
-        }
-        .modal-content {
-            background: var(--white);
-            padding: 50px;
-            border-radius: 30px;
-            max-width: 480px;
-            width: 90%;
-            text-align: center;
-        }
+        .wa-float:hover { transform: scale(1.1); }
 
         @media (max-width: 768px) {
-            .hero-content h2 { font-size: 2rem; }
             section { padding: 60px 5%; }
-            .price-card.popular { transform: scale(1); }
+            .hero-content h2 { font-size: 2rem; }
         }
     </style>
 </head>
@@ -168,101 +149,88 @@
 
     <header>
         <div class="header-brand">
-            <img src="Logo CorFiterapia _Trasparente.png" alt="CorFiterapia Logo">
+            <img src="logo.png.jpg" alt="Logo CorFiterapias">
             <div class="brand-text">
                 <h1>CORFITERAPIAS</h1>
-                <span>NIT: 901074077-2</span>
             </div>
         </div>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <h2>Gestión Estratégica en Seguridad y Salud en el Trabajo</h2>
-            <p>Corporación orientada a la promoción de la salud y fortalecimiento organizacional con cumplimiento normativo real.</p>
+            <h2>Expertos en Seguridad y Salud en el Trabajo</h2>
+            <p>Transformamos la cultura preventiva de su organización.</p>
         </div>
     </section>
 
     <section>
         <div class="section-title">
-            <h2>Nuestra Propuesta</h2>
+            <h2>Nuestra Corporación</h2>
             <div class="underline"></div>
         </div>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <i class="fas fa-shield-virus"></i>
-                <h3>Prevención Integral</h3>
-                <p>Enfoque basado en el acompañamiento técnico estratégico para la prevención del riesgo y promoción de la salud laboral.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Objetivo de Valor</h3>
-                <p>Diseñamos, estructuramos y acompañamos la implementación de su SG-SST para fortalecer la gestión del riesgo.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-check-double"></i>
-                <h3>Alcance Técnico</h3>
-                <p>Desde diagnósticos iniciales hasta auditorías internas y planes de emergencia con estructura técnica profesional.</p>
-            </div>
+        <div class="about-box">
+            <p><strong>Corporación Actividad Física y Fisioterapia - CORFITERAPIAS</strong> es una entidad orientada a la promoción de la salud, la prevención del riesgo y el fortalecimiento organizacional, que brinda servicios especializados de asesoría y consultoría en Seguridad y Salud en el Trabajo (SG-SST).</p>
+            <p>Nuestro enfoque se basa en el acompañamiento técnico estratégico, permitiendo a las organizaciones cumplir con la normatividad vigente de manera práctica, organizada y sin sobrecarga operativa.</p>
         </div>
     </section>
 
-    <section class="pricing-section">
+    <section style="background-color: #fff;">
         <div class="section-title">
-            <h2>Planes de Inversión</h2>
+            <h2>Alcance del Servicio</h2>
+            <div class="underline"></div>
+            <p style="max-width: 700px; margin: 0 auto;">El servicio se desarrolla bajo un modelo de acompañamiento, no de ejecución directa, e incluye:</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-item"><i class="fas fa-clipboard-check"></i><span>Diagnóstico inicial del SG-SST</span></div>
+            <div class="service-item"><i class="fas fa-file-alt"></i><span>Diseño documental del sistema</span></div>
+            <div class="service-item"><i class="fas fa-exclamation-triangle"></i><span>Matriz de identificación de peligros (guiada)</span></div>
+            <div class="service-item"><i class="fas fa-calendar-alt"></i><span>Plan de trabajo anual</span></div>
+            <div class="service-item"><i class="fas fa-user-md"></i><span>Vigilancia epidemiológica (base)</span></div>
+            <div class="service-item"><i class="fas fa-fire-extinguisher"></i><span>Plan de emergencias (técnico)</span></div>
+            <div class="service-item"><i class="fas fa-search"></i><span>Auditoría interna documental</span></div>
+            <div class="service-item"><i class="fas fa-users"></i><span>Capacitaciones básicas</span></div>
+            <div class="service-item"><i class="fas fa-chart-line"></i><span>Seguimiento y recomendaciones</span></div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="section-title">
+            <h2>Lo que dicen nuestros clientes</h2>
             <div class="underline"></div>
         </div>
-        <div class="pricing-grid">
-            <div class="price-card">
-                <h3>PAQUETE CONSULTORÍA</h3>
-                <p>Diseño y Estructuración Integral</p>
-                <span class="price-tag">$3.500.000</span>
-                <p style="margin-bottom: 25px; font-size: 0.9rem;">Incluye diagnóstico, documentos, matriz de riesgos y plan de trabajo anual.</p>
-                <button class="btn" onclick="openModal('https://mpago.li/24sMEqN')">Seleccionar Paquete</button>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <i class="fas fa-quote-right quote"></i>
+                <p>"Gracias a CorFiterapias logramos organizar todo nuestro sistema de seguridad sin traumatismos operativos. Su enfoque práctico es lo que necesitábamos."</p>
+                <div class="author">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=100&auto=format&fit=crop" alt="Cliente">
+                    <div class="author-info">
+                        <h4>Carlos Mendoza</h4>
+                        <span>Gerente de Logística</span>
+                    </div>
+                </div>
             </div>
-
-            <div class="price-card popular">
-                <h3>PAQUETE ASESORÍA</h3>
-                <p>Acompañamiento y Seguimiento Mensual</p>
-                <span class="price-tag">$1.200.000</span>
-                <p style="margin-bottom: 25px; font-size: 0.9rem;">Incluye capacitación, revisión de evidencias, soporte COPASST y seguimiento técnico.</p>
-                <button class="btn" onclick="openModal('https://mpago.li/34g69YH')">Seleccionar Paquete</button>
+            <div class="testimonial-card">
+                <i class="fas fa-quote-right quote"></i>
+                <p>"La asesoría técnica en la matriz de peligros fue fundamental para identificar riesgos que no habíamos considerado anteriormente. Excelente acompañamiento."</p>
+                <div class="author">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=100&auto=format&fit=crop" alt="Cliente">
+                    <div class="author-info">
+                        <h4>Elena Rojas</h4>
+                        <span>Dir. Recursos Humanos</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <div id="paymentModal" class="modal-overlay">
-        <div class="modal-content">
-            <i class="fas fa-user-check" style="font-size: 3.5rem; color: var(--accent); margin-bottom: 20px;"></i>
-            <h3 style="margin-bottom: 15px; font-family: 'Montserrat';">Registro de Empresa</h3>
-            <p style="margin-bottom: 30px; color: #666;">Para iniciar el proceso legal y técnico, por favor complete el formulario antes de pagar.</p>
-            
-            <a href="https://forms.gle/Kb75znAamKeRtScV8" target="_blank" class="btn" style="background: var(--accent); margin-bottom: 15px;">1. Llenar Formulario</a>
-            <a id="payBtn" href="#" target="_blank" class="btn">2. Proceder al Pago</a>
-            
-            <p onclick="closeModal()" style="margin-top: 25px; cursor: pointer; color: #999; font-weight: 500; font-size: 0.9rem;">Regresar</p>
-        </div>
-    </div>
-
-    <a href="https://wa.me/573054513754?text=Hola%20corFiterapia%20me%20interesa%20conocer%20mas%20informacion%20sobres%20las%20asesorias%20y%20consultorias%20en%20SG-SST" class="wa-float" target="_blank">
+    <a href="https://wa.me/573054513754" class="wa-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <footer style="text-align: center; padding: 40px; background: var(--white); font-size: 0.8rem; color: #999;">
-        <p>&copy; 2024 CORFITERAPIAS – CORPORACION ACTIVIDAD FISICA Y FISIOTERAPIA. Todos los derechos reservados.</p>
+    <footer style="text-align: center; padding: 40px; background: var(--dark); color: #888; font-size: 0.9rem;">
+        <p>&copy; 2024 CORFITERAPIAS – Todos los derechos reservados.</p>
     </footer>
 
-    <script>
-        function openModal(link) {
-            document.getElementById('paymentModal').style.display = 'flex';
-            document.getElementById('payBtn').href = link;
-        }
-        function closeModal() {
-            document.getElementById('paymentModal').style.display = 'none';
-        }
-        window.onclick = function(event) {
-            if (event.target == document.getElementById('paymentModal')) closeModal();
-        }
-    </script>
 </body>
 </html>
