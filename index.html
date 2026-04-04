@@ -1,1 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta Comercial SST - Corfiterapia</title>
+    <style>
+        :root {
+            --blue-dark: #003366;
+            --blue-medium: #0056b3;
+            --blue-light: #e6f0ff;
+            --white: #ffffff;
+            --gray: #f4f4f4;
+            --accent: #00a8e8;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: #333;
+            background-color: var(--gray);
+        }
+
+        header {
+            background-color: var(--blue-dark);
+            color: var(--white);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: var(--white);
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--blue-medium);
+        }
+
+        .hero-text h1 { color: var(--blue-dark); margin-bottom: 0.5rem; }
+        .hero-text h2 { color: var(--accent); font-weight: 300; margin-top: 0; }
+
+        .section-title {
+            color: var(--blue-dark);
+            border-left: 5px solid var(--accent);
+            padding-left: 1rem;
+            margin-top: 2.5rem;
+            text-transform: uppercase;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .card {
+            background: var(--blue-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-top: 4px solid var(--blue-medium);
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--blue-dark);
+            display: block;
+            margin-top: 1rem;
+        }
+
+        .list-style {
+            list-style: none;
+            padding: 0;
+        }
+
+        .list-style li::before {
+            content: "✓ ";
+            color: var(--blue-medium);
+            font-weight: bold;
+        }
+
+        footer {
+            background: var(--blue-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CORFITERAPIA</h1>
+    <p>Corporación Actividad Física y Fisioterapia</p>
+</header>
+
+<div class="container">
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Propuesta Comercial</h2>
+            <h1>Asesoría y Consultoría en Seguridad y Salud en el Trabajo (SG-SST)</h1>
+            <p>Te ayudamos a implementar tu sistema de forma <strong>práctica, organizada y sin complicaciones</strong>, cumpliendo siempre con la norma vigente.</p>
+        </div>
+    </section>
+
+    <h2 class="section-title">Acerca de la Compañía</h2>
+    <p>Somos una entidad orientada a la promoción de la salud, prevención del riesgo y fortalecimiento organizacional. Nuestro enfoque se basa en el acompañamiento técnico estratégico para cumplir la normatividad sin sobrecarga operativa.</p>
+
+    <h2 class="section-title">Nuestras Fases y Costos</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>FASE 1: Consultoría</h3>
+            <p>Diseñamos todo el sistema:</p>
+            <ul class="list-style">
+                <li>Diagnóstico Inicial</li>
+                <li>Diseño Documental</li>
+                <li>Matriz de Riesgos</li>
+                <li>Plan de Trabajo Anual</li>
+            </ul>
+            <span class="price">$3.500.000 (Pago único)</span>
+        </div>
+        <div class="card">
+            <h3>FASE 2: Asesoría</h3>
+            <p>Acompañamiento en la implementación:</p>
+            <ul class="list-style">
+                <li>Seguimiento y Capacitación</li>
+                <li>Revisión de Evidencias</li>
+                <li>Acompañamiento COPASST</li>
+                <li>Auditoría Interna</li>
+            </ul>
+            <span class="price">$1.200.000 Mensual</span>
+        </div>
+    </div>
+
+    <h2 class="section-title">Beneficios Clave</h2>
+    <div class="grid">
+        <div class="card"><strong>Evita Sanciones</strong><br>Cumplimiento estricto de la ley.</div>
+        <div class="card"><strong>Organiza tu Empresa</strong><br>Procesos claros y documentados.</div>
+        <div class="card"><strong>Reduce Riesgos</strong><br>Protección real para tus trabajadores.</div>
+    </div>
+
+    <h2 class="section-title">Metodología y Alcance</h2>
+    <p>Trabajamos bajo un modelo de acompañamiento paso a paso, entrega de herramientas/formatos y retroalimentación continua. Modalidad disponible: <strong>Virtual, Presencial o Mixta.</strong></p>
+</div>
+
+<footer>
+    <p>Presentado por Corfiterapia - 2024</p>
+</footer>
+
+</body>
+</html>
