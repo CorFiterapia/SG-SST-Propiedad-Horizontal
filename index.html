@@ -3,244 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CorFiterapia | Consultoría SG-SST</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>CORFITERAPIAS | SST</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <style>
-        :root {
-            --primary: #0056b3;
-            --secondary: #00a8e8;
-            --dark: #0a192f;
-            --light: #f8f9fa;
-            --success: #25d366;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: var(--light);
-        }
-
-        h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
-
-        /* Header & Logo */
-        header {
-            background: white;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .logo {
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), 
-                        url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 0 20px;
-        }
-
-        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-
-        /* Main Container */
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            color: var(--dark);
-        }
-
-        /* Pricing Cards */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card:hover { transform: translateY(-10px); }
-
-        .card-img {
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .card-content { padding: 25px; flex-grow: 1; text-align: center; }
-
-        .price {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin: 15px 0;
-            display: block;
-        }
-
-        .btn {
-            display: block;
-            padding: 12px 25px;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 600;
-            margin-top: 20px;
-            transition: background 0.3s;
-            cursor: pointer;
-            border: none;
-            width: 100%;
-        }
-
-        .btn:hover { background: var(--secondary); }
-
-        /* Floating WhatsApp */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: var(--success);
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 1000;
-            text-decoration: none;
-        }
-
-        /* Modal / Form Requirement */
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.8);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .modal {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            max-width: 500px;
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 1.8rem; }
-        }
+        :root { --primary: #004a99; --accent: #00a8e8; --dark: #05192d; --white: #ffffff; }
+        body { font-family: 'Roboto', sans-serif; margin: 0; color: #333; }
+        header { background: var(--white); padding: 15px 5%; display: flex; align-items: center; gap: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        .hero { background: linear-gradient(rgba(5,25,45,0.7), rgba(5,25,45,0.7)), url('https://images.unsplash.com/photo-1521791136364-798a7bc0d262?auto=format&fit=crop&w=1350&q=80'); background-size: cover; height: 60vh; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 10%; }
+        section { padding: 60px 10%; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: #f4f7f9; padding: 30px; border-radius: 15px; border-left: 5px solid var(--accent); }
+        .price-card { text-align: center; padding: 40px; border: 2px solid #eee; border-radius: 20px; transition: 0.3s; background: white;}
+        .price-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+        .btn { display: block; padding: 15px; background: var(--primary); color: white; text-decoration: none; border-radius: 50px; font-weight: bold; margin-top: 20px; cursor: pointer; border: none; width: 100%; text-align: center;}
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; z-index: 1000; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3);}
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 2000; justify-content: center; align-items: center; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">CorFiterapia [cite: 1, 2]</div>
+        <img src="Logo CorFiterapia _Trasparente.png" alt="Logo CorFiterapia" style="height: 60px;">
+        <div>
+            <div style="font-weight: bold; color: var(--primary); font-size: 1.2rem;">CORFITERAPIAS</div>
+            <div style="font-size: 0.8rem; color: #666;">NIT: 901074077-2</div>
+        </div>
     </header>
 
     <section class="hero">
-        <h1>Seguridad y Salud en el Trabajo</h1>
-        <p>Implementación práctica, organizada y bajo la norma vigente[cite: 8, 11].</p>
+        <h1>Asesoría y Consultoría en Seguridad y Salud en el Trabajo (SG-SST) [cite: 4, 5]</h1>
+        <p>Corporación Actividad Física y Fisioterapia [cite: 2]</p>
     </section>
 
-    <div class="container">
-        <h2 class="section-title">Nuestros Paquetes</h2>
+    <section>
+        <h2>1. Presentación</h2>
+        <p>Corfiterapias es una entidad orientada a la promoción de la salud, la prevención del riesgo y el fortalecimiento organizacional[cite: 20]. Brindamos acompañamiento técnico estratégico para cumplir la normatividad de manera práctica y sin sobrecarga operativa[cite: 21, 34].</p>
         
-        <div class="pricing-grid">
+        <div class="grid">
             <div class="card">
-                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1454165833767-027ffea9e77b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
-                <div class="card-content">
-                    <h3>PAQUETE CONSULTORÍA</h3>
-                    <p>Diseño completo: Diagnóstico, Documentación, Matriz de Riesgos y Plan de Trabajo[cite: 13, 14, 18].</p>
-                    <span class="price">$3.500.000 [cite: 19]</span>
-                    <button class="btn" onclick="openModal('https://mpago.li/24sMEqN')">Adquirir Consultoría</button>
-                </div>
+                <h3>2. Objetivos [cite: 45]</h3>
+                <ul>
+                    <li>Diseñar y estructurar el sistema[cite: 48].</li>
+                    <li>Orientar su implementación[cite: 49].</li>
+                    <li>Acompañar el cumplimiento normativo[cite: 50].</li>
+                    <li>Fortalecer la gestión del riesgo laboral[cite: 51].</li>
+                </ul>
             </div>
+            <div class="card">
+                <h3>3. Alcance del Servicio [cite: 56]</h3>
+                <ul>
+                    <li>Diagnóstico inicial del SG-SST[cite: 59].</li>
+                    <li>Diseño documental del sistema[cite: 60].</li>
+                    <li>Matriz de identificación de peligros[cite: 61].</li>
+                    <li>Plan de trabajo anual y de emergencias[cite: 62, 64].</li>
+                    <li>Auditoría interna documental[cite: 65].</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-            <div class="card">
-                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1521791136364-798a7bc0d262?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
-                <div class="card-content">
-                    <h3>PAQUETE ASESORÍA</h3>
-                    <p>Acompañamiento mensual: Seguimiento, Capacitación y Soporte COPASST[cite: 25, 28, 32].</p>
-                    <span class="price">$1.200.000 Mensual [cite: 33]</span>
-                    <button class="btn" onclick="openModal('https://mpago.li/34g69YH')">Adquirir Asesoría</button>
-                </div>
+    <section style="background: #f9f9f9;">
+        <h2 style="text-align:center;">Planes de Inversión [cite: 13, 25]</h2>
+        <div class="grid">
+            <div class="price-card">
+                <h3>FASE 1 - CONSULTORÍA [cite: 13]</h3>
+                <p>Diseño integral del sistema (Diagnóstico, documentos y matrices)[cite: 14, 15, 16].</p>
+                <div style="font-size: 2.2rem; font-weight: bold; margin: 20px 0; color: var(--primary);">$3.500.000 [cite: 19]</div>
+                <button class="btn" onclick="openModal('https://mpago.li/24sMEqN')">Adquirir Consultoría</button>
             </div>
+            
+            <div class="price-card">
+                <h3>FASE 2 - ASESORÍA [cite: 25]</h3>
+                <p>Acompañamiento mensual en implementación, capacitación y COPASST[cite: 28, 30, 32].</p>
+                <div style="font-size: 2.2rem; font-weight: bold; margin: 20px 0; color: var(--primary);">$1.200.000 [cite: 33]</div>
+                <p style="font-size: 0.9rem; color: #666;">Valor mensual [cite: 33]</p>
+                <button class="btn" onclick="openModal('https://mpago.li/34g69YH')">Adquirir Asesoría</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="paymentModal" class="modal">
+        <div style="background: white; padding: 40px; border-radius: 20px; max-width: 450px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+            <i class="fas fa-clipboard-list" style="font-size: 3rem; color: var(--accent); margin-bottom: 20px;"></i>
+            <h3>Registro Requerido</h3>
+            <p>Para formalizar su vinculación, por favor complete sus datos en el formulario antes de proceder al pago.</p>
+            <a href="https://forms.gle/Kb75znAamKeRtScV8" target="_blank" class="btn" style="background: var(--accent);">1. Completar Formulario</a>
+            <a id="payBtn" href="#" target="_blank" class="btn">2. Realizar Pago</a>
+            <p onclick="closeModal()" style="margin-top:20px; cursor:pointer; color: #999; font-weight: bold;">[ Cancelar ]</p>
         </div>
     </div>
 
-    <div id="modal" class="overlay">
-        <div class="modal">
-            <h3>¡Casi listo!</h3>
-            <p>Antes de proceder al pago, por favor completa tus datos en nuestro formulario de registro para formalizar la vinculación.</p>
-            <br>
-            <a id="formLink" href="https://forms.gle/Kb75znAamKeRtScV8" target="_blank" class="btn" style="background: var(--secondary);">1. Llenar Formulario</a>
-            <a id="payLink" href="#" target="_blank" class="btn">2. Ir a Pagar</a>
-            <button onclick="closeModal()" style="margin-top: 15px; background: none; border: none; color: #666; cursor: pointer;">Cerrar</button>
-        </div>
-    </div>
-
-    <a href="https://wa.me/573054513754?text=Hola%20corFiterapia%20me%20interesa%20conocer%20mas%20informacion%20sobres%20las%20asesorias%20y%20consultorias%20en%20SG-SST" class="whatsapp-btn" target="_blank">
+    <a href="https://wa.me/573054513754?text=Hola%20corFiterapia%20me%20interesa%20conocer%20mas%20informacion%20sobres%20las%20asesorias%20y%20consultorias%20en%20SG-SST" class="wa-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <script>
-        const modal = document.getElementById('modal');
-        const payLink = document.getElementById('payLink');
-
-        function openModal(paymentUrl) {
-            modal.style.display = 'flex';
-            payLink.href = paymentUrl;
+        function openModal(link) { 
+            document.getElementById('paymentModal').style.display = 'flex'; 
+            document.getElementById('payBtn').href = link; 
         }
-
-        function closeModal() {
-            modal.style.display = 'none';
+        function closeModal() { 
+            document.getElementById('paymentModal').style.display = 'none'; 
         }
-
-        // Cerrar modal al hacer clic fuera
+        // Cerrar modal al hacer clic fuera del contenido
         window.onclick = function(event) {
-            if (event.target == modal) closeModal();
+            if (event.target == document.getElementById('paymentModal')) {
+                closeModal();
+            }
         }
     </script>
-
 </body>
 </html>
