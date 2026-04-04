@@ -61,7 +61,7 @@
         nav ul { display: flex; list-style: none; gap: 20px; }
         nav ul li a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 0.9rem; }
 
-        /* Banner Principal con Logo Ajustado */
+        /* Banner Principal */
         .hero {
             height: 75vh;
             display: flex;
@@ -90,7 +90,52 @@
         .section-title { text-align: center; margin-bottom: 40px; }
         .underline { width: 60px; height: 4px; background: var(--accent); margin: 10px auto; }
 
-        /* Módulo Propiedad Horizontal */
+        /* Módulo de Servicios (Acompañamiento) */
+        .services-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .services-intro {
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--accent);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .service-card i {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-top: 5px;
+        }
+
+        .service-card h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            color: var(--dark);
+        }
+
+        /* Módulo Propuesta */
         .ph-box {
             background: var(--white);
             padding: 40px;
@@ -100,62 +145,25 @@
             margin: 0 auto;
             border-left: 8px solid var(--primary);
         }
-        .ph-box p { margin-bottom: 15px; font-size: 1.1rem; text-align: justify; }
 
-        .services-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
-            margin-top: 25px;
-        }
-        .services-list li { padding: 10px 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 10px; }
-        .services-list li i { color: var(--accent); }
-
-        /* SECCIÓN TESTIMONIOS */
+        /* Testimonios */
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
-            margin-top: 20px;
         }
         .testimonial-card {
             background: var(--white);
             padding: 30px;
             border-radius: 20px;
             box-shadow: var(--shadow);
-            position: relative;
         }
-        .testimonial-card i.quote-icon {
-            color: var(--accent);
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            display: block;
-        }
-        .testimonial-text {
-            font-style: italic;
-            font-size: 0.95rem;
-            color: #555;
-            margin-bottom: 20px;
-        }
-        .testimonial-author {
-            font-weight: 700;
-            color: var(--primary);
-            font-size: 0.9rem;
-            border-top: 1px solid #eee;
-            padding-top: 15px;
-        }
-        .testimonial-author span {
-            display: block;
-            font-weight: 400;
-            color: #888;
-            font-size: 0.8rem;
-        }
+        .testimonial-author { font-weight: 700; color: var(--primary); margin-top: 15px; }
+        .testimonial-author span { display: block; font-weight: 400; color: #888; font-size: 0.8rem; }
 
-        /* Planes e Inversión */
+        /* Planes */
         .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .price-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); text-align: center; }
-        .price-body { padding: 40px; }
+        .price-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); text-align: center; padding: 40px; }
         .price-tag { font-size: 2.2rem; font-weight: 700; color: var(--primary); margin: 15px 0; display: block; }
 
         .btn {
@@ -170,7 +178,6 @@
             border: none;
             cursor: pointer;
             transition: 0.3s;
-            font-size: 1.1rem;
         }
         .btn-accent { background: var(--accent); }
         .btn-disabled { background: #ccc; cursor: not-allowed; }
@@ -216,7 +223,7 @@
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#propuesta">Propuesta</a></li>
+                <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#testimonios">Testimonios</a></li>
                 <li><a href="#planes">Planes</a></li>
             </ul>
@@ -226,20 +233,72 @@
     <section id="inicio" class="hero">
         <img src="logo.png.png" alt="Logo CorFiterapias" class="hero-logo">
         <div class="hero-content">
-            <h2>Consultoria y Asesoria del SG-SST para Propiedades Horizontales</h2>
+            <h2>Consultoría y Asesoría del SG-SST para Propiedades Horizontales</h2>
             <p>Cumplimiento normativo y seguridad para su copropiedad.</p>
         </div>
     </section>
 
-    <section id="propuesta">
+    <section id="servicios">
+        <div class="section-title">
+            <h2>Nuestros Servicios</h2>
+            <div class="underline"></div>
+        </div>
+        
+        <div class="services-container">
+            <div class="services-intro">
+                <i class="fas fa-info-circle"></i> El servicio se desarrolla bajo un modelo de acompañamiento, no de ejecución directa.
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-clipboard-check"></i>
+                    <h4>Diagnóstico inicial del SG-SST</h4>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-folder-open"></i>
+                    <h4>Diseño documental del sistema</h4>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <h4>Matriz de identificación de peligros (estructura guiada)</h4>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h4>Plan de trabajo anual</h4>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-microscope"></i>
+                    <h4>Programa de vigilancia epidemiológica (estructura base)</h4>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-fire-extinguisher"></i>
+                    <h4>Plan de emergencias (estructura técnica)</h4>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-search"></i>
+                    <h4>Auditoría interna documental</h4>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h4>Capacitaciones básicas</h4>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Seguimiento y recomendaciones técnicas</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="propuesta" style="background: #f0f4f8;">
         <div class="section-title">
             <h2>Propuesta Técnica</h2>
             <div class="underline"></div>
         </div>
         <div class="ph-box">
             <p><strong>Reciban un cordial saludo.</strong></p>
-            <p>En cumplimiento de la normativa vigente en Colombia, todas las propiedades horizontales que cuenten con trabajadores deben implementar el SG-SST, con el fin de prevenir accidentes, enfermedades laborales y garantizar condiciones seguras para todos los colaboradores.</p>
-            <p>En este sentido, presentamos nuestra propuesta para la implementación y acompañamiento del SG-SST, adaptada a las necesidades específicas de su copropiedad.</p>
+            <p>En cumplimiento de la normativa vigente en Colombia, todas las propiedades horizontales que cuenten con trabajadores deben implementar el SG-SST, con el fin de prevenir accidentes y garantizar condiciones seguras.</p>
+            <p>Presentamos nuestra propuesta para la implementación y acompañamiento del SG-SST, adaptada a las necesidades específicas de su copropiedad.</p>
         </div>
     </section>
 
@@ -250,19 +309,14 @@
         </div>
         <div class="testimonials-grid">
             <div class="testimonial-card">
-                <i class="fas fa-quote-left quote-icon"></i>
-                <p class="testimonial-text">"La Consultoria y asesoria del SG-SST en nuestra copropiedad fue impecable. Profesionalismo y claridad en cada paso del proceso legal."</p>
+                <i class="fas fa-quote-left" style="color: var(--accent); margin-bottom: 10px;"></i>
+                <p style="font-style: italic;">"La asesoría fue impecable. Profesionalismo y claridad en cada paso del proceso legal."</p>
                 <p class="testimonial-author">Jorge Mendez<span>Propiedad Horizontal</span></p>
             </div>
             <div class="testimonial-card">
-                <i class="fas fa-quote-left quote-icon"></i>
-                <p class="testimonial-text">"Excelente acompañamiento en las auditorías. Nos brindan la tranquilidad de estar cumpliendo con toda la normativa del Ministerio."</p>
-                <p class="testimonial-author">Consejo de Administración <span>Conjunto Residencial</span></p>
-            </div>
-            <div class="testimonial-card">
-                <i class="fas fa-quote-left quote-icon"></i>
-                <p class="testimonial-text">"Estructuraron todo nuestro sistema de gestión de manera personalizada. Muy recomendados por su agilidad y conocimiento técnico."</p>
-                <p class="testimonial-author">Sara Montoya<span> Administradora PH</span></p>
+                <i class="fas fa-quote-left" style="color: var(--accent); margin-bottom: 10px;"></i>
+                <p style="font-style: italic;">"Excelente acompañamiento en las auditorías. Mucha tranquilidad normativa."</p>
+                <p class="testimonial-author">Consejo de Administración<span>Conjunto Residencial</span></p>
             </div>
         </div>
     </section>
@@ -271,20 +325,16 @@
         <div class="section-title"><h2>Planes de Inversión</h2><div class="underline"></div></div>
         <div class="pricing-grid">
             <div class="price-card">
-                <div class="price-body">
-                    <h3>PAQUETE CONSULTORÍA</h3>
-                    <p>Diseño y Estructuración</p>
-                    <span class="price-tag">$3.500.000</span>
-                    <button class="btn" onclick="openStepModal('https://mpago.li/24sMEqN')">Iniciar Vinculación</button>
-                </div>
+                <h3>PAQUETE CONSULTORÍA</h3>
+                <p>Diseño y Estructuración</p>
+                <span class="price-tag">$3.500.000</span>
+                <button class="btn" onclick="openStepModal('https://mpago.li/24sMEqN')">Iniciar Vinculación</button>
             </div>
             <div class="price-card" style="border: 2px solid var(--accent);">
-                <div class="price-body">
-                    <h3>PAQUETE ASESORÍA</h3>
-                    <p>Implementación Mensual</p>
-                    <span class="price-tag">$1.200.000</span>
-                    <button class="btn btn-accent" onclick="openStepModal('https://mpago.li/34g69YH')">Iniciar Vinculación</button>
-                </div>
+                <h3>PAQUETE ASESORÍA</h3>
+                <p>Implementación Mensual</p>
+                <span class="price-tag">$1.200.000</span>
+                <button class="btn btn-accent" onclick="openStepModal('https://mpago.li/34g69YH')">Iniciar Vinculación</button>
             </div>
         </div>
     </section>
@@ -293,8 +343,8 @@
         <div class="modal-content">
             <div id="step1" class="step-container step-active">
                 <i class="fas fa-edit" style="font-size: 3rem; color: var(--accent); margin-bottom: 20px;"></i>
-                <h3>PASO 1: Registro de Empresa</h3>
-                <p style="margin: 20px 0; color: #666;">Para generar su expediente técnico legal, primero debe completar el formulario oficial de registro.</p>
+                <h3>PASO 1: Registro</h3>
+                <p style="margin: 20px 0; color: #666;">Complete el formulario oficial de registro.</p>
                 <a href="https://forms.gle/ZY9CyoPXGNEfcUay8" target="_blank" class="btn btn-accent" onclick="enableStep2()">
                     Completar Formulario Ahora
                 </a>
@@ -305,11 +355,10 @@
             <div id="step2" class="step-container">
                 <i class="fas fa-credit-card" style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
                 <h3>PASO 2: Pago Seguro</h3>
-                <p style="margin: 20px 0; color: #666;">Proceda a realizar el pago seguro para activar su consultoría.</p>
-                <a id="payBtn" href="#" target="_blank" class="btn">Realizar Pago con Mercado Pago</a>
-                <p onclick="showStep(1)" style="margin-top: 15px; cursor: pointer; color: var(--accent); font-size: 0.9rem;">Volver al registro</p>
+                <a id="payBtn" href="#" target="_blank" class="btn">Realizar Pago</a>
+                <p onclick="showStep(1)" style="margin-top: 15px; cursor: pointer; color: var(--accent);">Volver</p>
             </div>
-            <p onclick="closeStepModal()" style="margin-top: 25px; cursor: pointer; color: #bbb; font-size: 0.9rem;">Cancelar proceso</p>
+            <p onclick="closeStepModal()" style="margin-top: 25px; cursor: pointer; color: #bbb;">Cancelar</p>
         </div>
     </div>
 
