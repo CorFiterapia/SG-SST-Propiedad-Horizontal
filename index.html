@@ -90,7 +90,7 @@
         .section-title { text-align: center; margin-bottom: 40px; }
         .underline { width: 60px; height: 4px; background: var(--accent); margin: 10px auto; }
 
-        /* Módulo de Servicios (Acompañamiento) */
+        /* Módulo de Servicios */
         .services-container {
             max-width: 1100px;
             margin: 0 auto;
@@ -178,11 +178,12 @@
             border: none;
             cursor: pointer;
             transition: 0.3s;
+            text-align: center;
         }
         .btn-accent { background: var(--accent); }
         .btn-disabled { background: #ccc; cursor: not-allowed; }
 
-        /* Modales */
+        /* Modales Mejorados */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -224,7 +225,6 @@
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#testimonios">Testimonios</a></li>
                 <li><a href="#planes">Planes</a></li>
             </ul>
         </nav>
@@ -246,77 +246,19 @@
         
         <div class="services-container">
             <div class="services-intro">
-                <i class="fas fa-info-circle"></i> El servicio se desarrolla bajo un modelo de acompañamiento, no de ejecución directa.
+                <i class="fas fa-info-circle"></i> El servicio se desarrolla bajo un modelo de acompañamiento profesional.
             </div>
 
             <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-clipboard-check"></i>
-                    <h4>Diagnóstico inicial del SG-SST</h4>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-folder-open"></i>
-                    <h4>Diseño documental del sistema</h4>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-exclamation-circle"></i>
-                    <h4>Matriz de identificación de peligros (estructura guiada)</h4>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-calendar-alt"></i>
-                    <h4>Plan de trabajo anual</h4>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-microscope"></i>
-                    <h4>Programa de vigilancia epidemiológica (estructura base)</h4>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-fire-extinguisher"></i>
-                    <h4>Plan de emergencias (estructura técnica)</h4>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-search"></i>
-                    <h4>Auditoría interna documental</h4>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-chalkboard-teacher"></i>
-                    <h4>Capacitaciones básicas</h4>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h4>Seguimiento y recomendaciones técnicas</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="propuesta" style="background: #f0f4f8;">
-        <div class="section-title">
-            <h2>Propuesta Técnica</h2>
-            <div class="underline"></div>
-        </div>
-        <div class="ph-box">
-            <p><strong>Reciban un cordial saludo.</strong></p>
-            <p>En cumplimiento de la normativa vigente en Colombia, todas las propiedades horizontales que cuenten con trabajadores deben implementar el SG-SST, con el fin de prevenir accidentes y garantizar condiciones seguras.</p>
-            <p>Presentamos nuestra propuesta para la implementación y acompañamiento del SG-SST, adaptada a las necesidades específicas de su copropiedad.</p>
-        </div>
-    </section>
-
-    <section id="testimonios" style="background: #f0f7ff;">
-        <div class="section-title">
-            <h2>Lo que dicen nuestros clientes</h2>
-            <div class="underline"></div>
-        </div>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <i class="fas fa-quote-left" style="color: var(--accent); margin-bottom: 10px;"></i>
-                <p style="font-style: italic;">"La asesoría fue impecable. Profesionalismo y claridad en cada paso del proceso legal."</p>
-                <p class="testimonial-author">Jorge Mendez<span>Propiedad Horizontal</span></p>
-            </div>
-            <div class="testimonial-card">
-                <i class="fas fa-quote-left" style="color: var(--accent); margin-bottom: 10px;"></i>
-                <p style="font-style: italic;">"Excelente acompañamiento en las auditorías. Mucha tranquilidad normativa."</p>
-                <p class="testimonial-author">Consejo de Administración<span>Conjunto Residencial</span></p>
+                <div class="service-card"><i class="fas fa-clipboard-check"></i><h4>Diagnóstico inicial del SG-SST</h4></div>
+                <div class="service-card"><i class="fas fa-folder-open"></i><h4>Diseño documental del sistema</h4></div>
+                <div class="service-card"><i class="fas fa-exclamation-circle"></i><h4>Matriz de identificación de peligros</h4></div>
+                <div class="service-card"><i class="fas fa-calendar-alt"></i><h4>Plan de trabajo anual</h4></div>
+                <div class="service-card"><i class="fas fa-microscope"></i><h4>Vigilancia epidemiológica</h4></div>
+                <div class="service-card"><i class="fas fa-fire-extinguisher"></i><h4>Plan de emergencias técnico</h4></div>
+                <div class="service-card"><i class="fas fa-search"></i><h4>Auditoría interna documental</h4></div>
+                <div class="service-card"><i class="fas fa-chalkboard-teacher"></i><h4>Capacitaciones básicas</h4></div>
+                <div class="service-card"><i class="fas fa-chart-line"></i><h4>Seguimiento y recomendaciones</h4></div>
             </div>
         </div>
     </section>
@@ -328,13 +270,13 @@
                 <h3>PAQUETE CONSULTORÍA</h3>
                 <p>Diseño y Estructuración</p>
                 <span class="price-tag">$3.500.000</span>
-                <button class="btn" onclick="openStepModal('https://mpago.li/24sMEqN')">Iniciar Vinculación</button>
+                <button class="btn" onclick="openStepModal('https://mpago.li/24sMEqN')">Contratar Servicio</button>
             </div>
             <div class="price-card" style="border: 2px solid var(--accent);">
                 <h3>PAQUETE ASESORÍA</h3>
                 <p>Implementación Mensual</p>
                 <span class="price-tag">$1.200.000</span>
-                <button class="btn btn-accent" onclick="openStepModal('https://mpago.li/34g69YH')">Iniciar Vinculación</button>
+                <button class="btn btn-accent" onclick="openStepModal('https://mpago.li/34g69YH')">Contratar Servicio</button>
             </div>
         </div>
     </section>
@@ -342,23 +284,28 @@
     <div id="stepModal" class="modal-overlay">
         <div class="modal-content">
             <div id="step1" class="step-container step-active">
-                <i class="fas fa-edit" style="font-size: 3rem; color: var(--accent); margin-bottom: 20px;"></i>
-                <h3>PASO 1: Registro</h3>
-                <p style="margin: 20px 0; color: #666;">Complete el formulario oficial de registro.</p>
-                <a href="https://forms.gle/ZY9CyoPXGNEfcUay8" target="_blank" class="btn btn-accent" onclick="enableStep2()">
-                    Completar Formulario Ahora
+                <i class="fas fa-credit-card" style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
+                <h3>PASO 1: Pago Seguro</h3>
+                <p style="margin: 20px 0; color: #666;">Realice el pago a través de nuestra plataforma segura de Mercado Pago para iniciar su proceso.</p>
+                <a id="payBtn" href="#" target="_blank" class="btn" onclick="enableStep2()">
+                    Realizar Pago con Mercado Pago
                 </a>
                 <button id="btnNext" class="btn btn-disabled" disabled onclick="showStep(2)" style="margin-top: 15px;">
-                    Siguiente: Ir al Pago <i class="fas fa-arrow-right"></i>
+                    Siguiente: Registrar Datos <i class="fas fa-arrow-right"></i>
                 </button>
             </div>
+
             <div id="step2" class="step-container">
-                <i class="fas fa-credit-card" style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
-                <h3>PASO 2: Pago Seguro</h3>
-                <a id="payBtn" href="#" target="_blank" class="btn">Realizar Pago</a>
-                <p onclick="showStep(1)" style="margin-top: 15px; cursor: pointer; color: var(--accent);">Volver</p>
+                <i class="fas fa-edit" style="font-size: 3rem; color: var(--accent); margin-bottom: 20px;"></i>
+                <h3>PASO 2: Registro de Empresa</h3>
+                <p style="margin: 20px 0; color: #666;">¡Pago detectado! Ahora, por favor complete los datos de su copropiedad para generar el expediente técnico.</p>
+                <a href="https://forms.gle/ZY9CyoPXGNEfcUay8" target="_blank" class="btn btn-accent">
+                    Completar Formulario de Registro
+                </a>
+                <p style="margin-top: 15px; font-size: 0.8rem; color: #888;">Una vez completado, un consultor se contactará con usted.</p>
             </div>
-            <p onclick="closeStepModal()" style="margin-top: 25px; cursor: pointer; color: #bbb;">Cancelar</p>
+
+            <p onclick="closeStepModal()" style="margin-top: 25px; cursor: pointer; color: #bbb; font-size: 0.9rem;">Cerrar ventana</p>
         </div>
     </div>
 
@@ -366,22 +313,36 @@
 
     <script>
         let currentPaymentLink = "";
+        
         function openStepModal(link) {
             currentPaymentLink = link;
             document.getElementById('stepModal').style.display = 'flex';
             document.getElementById('payBtn').href = link;
             showStep(1);
+            
+            // Resetear el botón de siguiente por si acaso
+            const nextBtn = document.getElementById('btnNext');
+            nextBtn.classList.add('btn-disabled');
+            nextBtn.disabled = true;
         }
+
         function showStep(stepNumber) {
             document.querySelectorAll('.step-container').forEach(el => el.classList.remove('step-active'));
             document.getElementById('step' + stepNumber).classList.add('step-active');
         }
+
         function enableStep2() {
-            const nextBtn = document.getElementById('btnNext');
-            nextBtn.classList.remove('btn-disabled');
-            nextBtn.disabled = false;
+            // Se activa después de que el usuario hace clic en el botón de pago
+            setTimeout(() => {
+                const nextBtn = document.getElementById('btnNext');
+                nextBtn.classList.remove('btn-disabled');
+                nextBtn.disabled = false;
+            }, 1000); 
         }
-        function closeStepModal() { document.getElementById('stepModal').style.display = 'none'; }
+
+        function closeStepModal() { 
+            document.getElementById('stepModal').style.display = 'none'; 
+        }
     </script>
 </body>
 </html>
