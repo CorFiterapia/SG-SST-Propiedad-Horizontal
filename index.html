@@ -38,60 +38,20 @@
         .section-title { text-align: center; margin-bottom: 40px; }
         .underline { width: 60px; height: 4px; background: var(--accent); margin: 10px auto; }
 
-        /* Estilos para el Módulo de Asesoría Especializada */
-        .consultancy-module { 
-            background: var(--white); 
-            border-radius: 20px; 
-            padding: 40px; 
-            box-shadow: var(--shadow); 
-            max-width: 900px; 
-            margin: 20px auto; 
-            border-left: 8px solid var(--primary);
-        }
-
-        .consultancy-header { text-align: center; margin-bottom: 25px; }
-        .consultancy-header h3 { 
-            color: var(--primary); 
-            font-family: 'Montserrat', sans-serif; 
-            font-size: 1.8rem; 
-            margin-bottom: 5px;
-        }
-
-        .consultancy-list { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 15px; 
-            list-style: none; 
-            padding: 0;
-        }
-
-        .consultancy-item { 
-            background: var(--light); 
-            padding: 15px; 
-            border-radius: 12px; 
-            display: flex; 
-            align-items: center; 
-            gap: 12px; 
-            transition: 0.3s;
-            font-size: 0.95rem;
-            color: #444;
-        }
-
-        .consultancy-item:hover { 
-            transform: scale(1.02);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-
-        .consultancy-item i { color: var(--accent); font-size: 1.2rem; }
-
-        /* Estilo Nota Propuesta */
         .ph-box { background: var(--white); padding: 40px; border-radius: 20px; box-shadow: var(--shadow); max-width: 900px; margin: 0 auto; border-left: 8px solid var(--primary); }
 
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         .service-card { background: var(--white); padding: 25px; border-radius: 15px; box-shadow: var(--shadow); border-top: 4px solid var(--accent); display: flex; align-items: flex-start; gap: 15px; }
         .service-card i { color: var(--primary); font-size: 1.4rem; margin-top: 5px; }
 
-        /* Testimonios */
+        .consultancy-module { background: var(--white); border-radius: 20px; padding: 40px; box-shadow: var(--shadow); max-width: 900px; margin: 20px auto; border-left: 8px solid var(--primary); }
+        .consultancy-header { text-align: center; margin-bottom: 25px; }
+        .consultancy-header h3 { color: var(--primary); font-family: 'Montserrat', sans-serif; font-size: 1.8rem; margin-bottom: 5px; }
+        .consultancy-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; list-style: none; padding: 0; }
+        .consultancy-item { background: var(--light); padding: 15px; border-radius: 12px; display: flex; align-items: center; gap: 12px; transition: 0.3s; font-size: 0.95rem; color: #444; }
+        .consultancy-item:hover { transform: scale(1.02); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .consultancy-item i { color: var(--accent); font-size: 1.2rem; }
+
         .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
         .testimonial-card { background: var(--white); padding: 30px; border-radius: 20px; box-shadow: var(--shadow); }
         .testimonial-author { font-weight: 700; color: var(--primary); margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px; }
@@ -99,7 +59,8 @@
 
         /* Precios */
         .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .price-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); text-align: center; padding: 40px; }
+        .price-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); text-align: center; padding: 40px; transition: 0.3s; }
+        .price-card:hover { transform: translateY(-5px); }
         .price-tag { font-size: 2.2rem; font-weight: 700; color: var(--primary); margin: 15px 0; display: block; }
 
         .btn { display: inline-block; width: 100%; padding: 16px; background: var(--primary); color: var(--white); text-decoration: none; border-radius: 50px; font-weight: 600; border: none; cursor: pointer; transition: 0.3s; text-align: center; }
@@ -152,7 +113,7 @@
         <div class="ph-box">
             <p><strong>Reciban un cordial saludo.</strong></p>
             <p>En cumplimiento de la normativa vigente en Colombia, todas las propiedades horizontales que cuenten con trabajadores deben implementar el SG-SST para prevenir accidentes y garantizar condiciones seguras.</p>
-            <p>Presentamos nuestra propuesta para la implementación y acompañamiento del SG-SST, adaptada a las necesidades específicas de su copropiedad. El servicio se desarrolla bajo un modelo de acompañamiento, no de ejecución directa.</p>
+            <p>Presentamos nuestra propuesta para la implementación y acompañamiento del SG-SST, adaptada a las necesidades específicas de su copropiedad.</p>
         </div>
     </section>
 
@@ -173,21 +134,16 @@
             <h2>Módulo de Asesoría</h2>
             <div class="underline"></div>
         </div>
-        
         <div class="consultancy-module">
             <div class="consultancy-header">
                 <h3>Asesoría y Consultoría para Empresas en SST</h3>
                 <p>Servicios SST y auditorías del sistema</p>
             </div>
-            
             <ul class="consultancy-list">
                 <li class="consultancy-item"><i class="fas fa-check-circle"></i> Implementación y Seguimiento SG-SST</li>
                 <li class="consultancy-item"><i class="fas fa-check-circle"></i> Capacitaciones y Entrenamientos</li>
-                <li class="consultancy-item"><i class="fas fa-check-circle"></i> Inspecciones y Seguridad</li>
                 <li class="consultancy-item"><i class="fas fa-check-circle"></i> Inspecciones de Puestos de Trabajo</li>
-                <li class="consultancy-item"><i class="fas fa-check-circle"></i> Estilos de Vida Saludable</li>
                 <li class="consultancy-item"><i class="fas fa-check-circle"></i> Ergonomía y Pausa Activa</li>
-                <li class="consultancy-item"><i class="fas fa-check-circle"></i> Planes de Mejora Continua</li>
             </ul>
         </div>
     </section>
@@ -209,15 +165,33 @@
     <section id="planes">
         <div class="section-title"><h2>Inversión</h2><div class="underline"></div></div>
         <div class="pricing-grid">
+            <div class="price-card" style="border: 2px solid var(--accent); position: relative;">
+                <div style="position: absolute; top: 10px; right: 10px; background: var(--urgent); color: white; padding: 2px 10px; border-radius: 10px; font-size: 0.7rem;">MÁS SOLICITADO</div>
+                <h3>ASESORÍA ESPECIALIZADA</h3>
+                <p>Pago por Horas</p>
+                <span class="price-tag">$100.000 <small style="font-size: 0.9rem; color: #666;">/ hora</small></span>
+                
+                <div style="margin: 15px 0;">
+                    <label style="display: block; font-size: 0.8rem; margin-bottom: 5px; font-weight: bold;">¿Cuántas horas necesitas?</label>
+                    <input type="number" id="cantHoras" value="1" min="1" max="20" 
+                           style="width: 80px; padding: 10px; border-radius: 10px; border: 2px solid var(--accent); text-align: center; font-weight: bold; font-size: 1.1rem;">
+                </div>
+
+                <button class="btn btn-accent" onclick="procesarPagoHoras()">
+                    Contratar por <span id="displayTotal">$100.000</span>
+                </button>
+            </div>
+
             <div class="price-card">
-                <h3>CONSULTORÍA</h3>
+                <h3>CONSULTORÍA (2 meses)</h3>
                 <span class="price-tag">$3.500.000</span>
                 <button class="btn" onclick="openStepModal('https://mpago.li/24sMEqN')">Contratar Servicio</button>
             </div>
-            <div class="price-card" style="border: 2px solid var(--accent);">
-                <h3>ASESORÍA</h3>
+
+            <div class="price-card">
+                <h3>Auditoria SST desde</h3>
                 <span class="price-tag">$1.200.000</span>
-                <button class="btn btn-accent" onclick="openStepModal('https://mpago.li/34g69YH')">Contratar Servicio</button>
+                <button class="btn" onclick="openStepModal('https://mpago.li/34g69YH')">Contratar Servicio</button>
             </div>
         </div>
     </section>
@@ -227,14 +201,14 @@
             <div id="step1" class="step-container step-active">
                 <i class="fas fa-credit-card" style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
                 <h3>PASO 1: Pago Seguro</h3>
-                <p style="margin: 20px 0; color: #666;">Para iniciar la vinculación técnica, por favor realice el pago del plan seleccionado.</p>
+                <p style="margin: 20px 0; color: #666;">Realice el pago para iniciar la vinculación técnica.</p>
                 <a id="payBtn" href="#" target="_blank" class="btn" onclick="enableStep2()">Realizar el Pago</a>
-                <button id="btnNext" class="btn btn-disabled" disabled onclick="showStep(2)" style="margin-top: 15px;">Siguiente: Formulario de Registro <i class="fas fa-arrow-right"></i></button>
+                <button id="btnNext" class="btn btn-disabled" disabled onclick="showStep(2)" style="margin-top: 15px;">Siguiente <i class="fas fa-arrow-right"></i></button>
             </div>
             <div id="step2" class="step-container">
                 <i class="fas fa-info-circle" style="font-size: 3rem; color: var(--accent); margin-bottom: 20px;"></i>
                 <h3>PASO 2: Información</h3>
-                <p style="margin: 20px 0; color: #666;">¡Pago iniciado! Ahora proporcione los detalles de su copropiedad para el registro.</p>
+                <p style="margin: 20px 0; color: #666;">¡Pago iniciado! Complete el registro técnico.</p>
                 <a href="https://forms.gle/ZY9CyoPXGNEfcUay8" target="_blank" class="btn btn-accent">Llenar Formulario Técnico</a>
             </div>
             <p onclick="closeStepModal()" style="margin-top: 25px; cursor: pointer; color: #bbb;">Cancelar</p>
@@ -242,10 +216,27 @@
     </div>
 
     <a href="https://wa.me/573054513754?text=Hola%20CorFiterapia%20quiero%20mas%20informacion%20sobre%20la%20asesoria%20y%20consultoria%20en%20SST" class="wa-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script>
+        // Lógica de Sumatoria de Horas
+        const inputHoras = document.getElementById('cantHoras');
+        if(inputHoras) {
+            inputHoras.addEventListener('input', function() {
+                const total = this.value * 100000;
+                document.getElementById('displayTotal').innerText = '$' + total.toLocaleString('es-CO');
+            });
+        }
+
+        function procesarPagoHoras() {
+            const horas = document.getElementById('cantHoras').value;
+            const total = (horas * 100000).toLocaleString('es-CO');
+            const mensaje = `Hola CorFiterapia! Quiero contratar ${horas} hora(s) de asesoría especializada en SST por un total de $${total}.`;
+            openStepModal(`https://wa.me/573054513754?text=${encodeURIComponent(mensaje)}`);
+        }
+
+        // Lógica del Modal
         function openStepModal(link) {
             document.getElementById('stepModal').style.display = 'flex';
             document.getElementById('payBtn').href = link;
