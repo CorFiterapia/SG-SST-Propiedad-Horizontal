@@ -27,7 +27,8 @@
         header { background: var(--white); padding: 0.5rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 40px; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
         .header-brand img { height: 65px; width: auto; }
         nav ul { display: flex; list-style: none; gap: 20px; }
-        nav ul li a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 0.9rem; }
+        nav ul li a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        nav ul li a:hover { color: var(--accent); }
 
         .hero { height: 65vh; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--white); text-align: center; background: linear-gradient(rgba(0, 74, 153, 0.85), rgba(5, 25, 45, 0.95)), url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; padding: 0 10%; }
         .hero-logo { width: 380px; max-width: 85%; margin-bottom: 25px; filter: drop-shadow(0 8px 15px rgba(0,0,0,0.4)); }
@@ -36,6 +37,52 @@
         section { padding: 80px 10%; }
         .section-title { text-align: center; margin-bottom: 40px; }
         .underline { width: 60px; height: 4px; background: var(--accent); margin: 10px auto; }
+
+        /* Estilos para el Módulo de Asesoría Especializada */
+        .consultancy-module { 
+            background: var(--white); 
+            border-radius: 20px; 
+            padding: 40px; 
+            box-shadow: var(--shadow); 
+            max-width: 900px; 
+            margin: 20px auto; 
+            border-left: 8px solid var(--primary);
+        }
+
+        .consultancy-header { text-align: center; margin-bottom: 25px; }
+        .consultancy-header h3 { 
+            color: var(--primary); 
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 1.8rem; 
+            margin-bottom: 5px;
+        }
+
+        .consultancy-list { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 15px; 
+            list-style: none; 
+            padding: 0;
+        }
+
+        .consultancy-item { 
+            background: var(--light); 
+            padding: 15px; 
+            border-radius: 12px; 
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+            transition: 0.3s;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        .consultancy-item:hover { 
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .consultancy-item i { color: var(--accent); font-size: 1.2rem; }
 
         /* Estilo Nota Propuesta */
         .ph-box { background: var(--white); padding: 40px; border-radius: 20px; box-shadow: var(--shadow); max-width: 900px; margin: 0 auto; border-left: 8px solid var(--primary); }
@@ -50,6 +97,7 @@
         .testimonial-author { font-weight: 700; color: var(--primary); margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px; }
         .testimonial-author span { display: block; font-weight: 400; color: #888; font-size: 0.8rem; }
 
+        /* Precios */
         .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .price-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); text-align: center; padding: 40px; }
         .price-tag { font-size: 2.2rem; font-weight: 700; color: var(--primary); margin: 15px 0; display: block; }
@@ -81,6 +129,7 @@
             <ul>
                 <li><a href="#propuesta">Propuesta</a></li>
                 <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#auditoria">Auditoría</a></li> 
                 <li><a href="#testimonios">Testimonios</a></li>
                 <li><a href="#planes">Planes</a></li>
             </ul>
@@ -108,7 +157,7 @@
     </section>
 
     <section id="servicios">
-        <div class="section-title"><h2>Nuestros Servicios </h2><div class="underline"></div></div>
+        <div class="section-title"><h2>Nuestros Servicios</h2><div class="underline"></div></div>
         <div class="services-grid">
             <div class="service-card"><i class="fas fa-clipboard-check"></i><h4>Diagnóstico inicial del SG-SST</h4></div>
             <div class="service-card"><i class="fas fa-folder-open"></i><h4>Diseño documental del sistema</h4></div>
@@ -119,6 +168,30 @@
         </div>
     </section>
 
+    <section id="auditoria" style="background: #e9f2fb;">
+        <div class="section-title">
+            <h2>Módulo de Asesoría Especializada</h2>
+            <div class="underline"></div>
+        </div>
+        
+        <div class="consultancy-module">
+            <div class="consultancy-header">
+                <h3>Asesoría y Consultoría para Empresas en SST</h3>
+                <p>Servicios técnicos y auditorías del sistema</p>
+            </div>
+            
+            <ul class="consultancy-list">
+                <li class="consultancy-item"><i class="fas fa-check-circle"></i> Implementación y Seguimiento SG-SST</li>
+                <li class="consultancy-item"><i class="fas fa-check-circle"></i> Capacitaciones y Entrenamientos</li>
+                <li class="consultancy-item"><i class="fas fa-check-circle"></i> Inspecciones y Seguridad</li>
+                <li class="consultancy-item"><i class="fas fa-check-circle"></i> Inspecciones de Puestos de Trabajo</li>
+                <li class="consultancy-item"><i class="fas fa-check-circle"></i> Estilos de Vida Saludable</li>
+                <li class="consultancy-item"><i class="fas fa-check-circle"></i> Ergonomía y Pausa Activa</li>
+                <li class="consultancy-item"><i class="fas fa-check-circle"></i> Planes de Mejora Continua</li>
+            </ul>
+        </div>
+    </section>
+    
     <section id="testimonios" style="background: #f0f7ff;">
         <div class="section-title"><h2>Casos de Éxito</h2><div class="underline"></div></div>
         <div class="testimonials-grid">
@@ -156,7 +229,7 @@
                 <h3>PASO 1: Pago Seguro</h3>
                 <p style="margin: 20px 0; color: #666;">Para iniciar la vinculación técnica, por favor realice el pago del plan seleccionado.</p>
                 <a id="payBtn" href="#" target="_blank" class="btn" onclick="enableStep2()">Realizar el Pago</a>
-                <button id="btnNext" class="btn btn-disabled" disabled onclick="showStep(2)" style="margin-top: 15px;">Siguiente: Formulario de Registro<i class="fas fa-arrow-right"></i></button>
+                <button id="btnNext" class="btn btn-disabled" disabled onclick="showStep(2)" style="margin-top: 15px;">Siguiente: Formulario de Registro <i class="fas fa-arrow-right"></i></button>
             </div>
             <div id="step2" class="step-container">
                 <i class="fas fa-info-circle" style="font-size: 3rem; color: var(--accent); margin-bottom: 20px;"></i>
